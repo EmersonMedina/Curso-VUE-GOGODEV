@@ -1,16 +1,20 @@
 <template>
-  <ModelForm />
-  <TeachersExercise />
+  <CycleOption />
+  <PostList />
 </template>
 
 <script lang="ts" setup>
-import ModelForm from "./components/ModelForm.vue";
-import TeachersExercise from "./components/TeachersExercise.vue";
+import CycleOption from "./components/CycleOption.vue";
+import PostList from "./components/PostList.vue";
 </script>
 
 <style>
 body {
   margin: 0 auto;
   max-width: 1200px;
+}
+
+* {
+  box-sizing: border-box;
 }
 </style>
