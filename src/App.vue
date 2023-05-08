@@ -1,13 +1,16 @@
 <template>
-  <ClassBind />
-  <ExampleSelective />
-  <ExampleFor />
+  <ModelForm />
+  <TeachersExercise />
 </template>
 
 <script lang="ts" setup>
-import ExampleSelective from "./components/ExampleSelective.vue";
-import ExampleFor from "./components/ExampleFor.vue";
-import ClassBind from "./components/ClassBind.vue";
+import ModelForm from "./components/ModelForm.vue";
+import TeachersExercise from "./components/TeachersExercise.vue";
 </script>
 
-<style></style>
+<style>
+body {
+  margin: 0 auto;
+  max-width: 1200px;
+}
+</style>
