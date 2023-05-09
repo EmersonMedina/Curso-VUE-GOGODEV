@@ -1,11 +1,13 @@
 <template>
-  <CycleOption />
-  <PostList />
+  <ComputedOption />
+  <ComputedComposition />
+  <FacturaExercise />
 </template>
 
 <script lang="ts" setup>
-import CycleOption from "./components/CycleOption.vue";
-import PostList from "./components/PostList.vue";
+import ComputedComposition from "./components/ComputedComposition.vue";
+import ComputedOption from "./components/ComputedOption.vue";
+import FacturaExercise from "./components/FacturaExercise.vue";
 </script>
 
 <style>

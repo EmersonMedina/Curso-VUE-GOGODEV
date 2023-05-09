@@ -9,29 +9,25 @@
   </div>
 </template>
 
-<script lang="ts">
-import { defineComponent, ref, Ref } from "vue";
+<script lang="ts" setup>
+import { defineProps, defineEmits, Ref, ref } from "vue";
 
-export default defineComponent({
-  name: "PostDetail",
-  props: {
-    title: { type: String, required: true },
-    description: {
-      type: String,
-      required: false,
-      default: "Post sin contenido",
-    },
-  },
-  emits: ["sayHi"],
-  setup(props, { emit }) {
-    const handleClick = () => {
-      emit("sayHi", message.value);
-    };
-
-    let message: Ref<string> = ref("");
-    return { props, message, handleClick };
+const props = defineProps({
+  title: { type: String, required: true },
+  description: {
+    type: String,
+    required: false,
+    defaultValue: "Post sin contenido",
   },
 });
+
+const emits = defineEmits(["sayHi"]);
+
+const handleClick = () => {
+  emits("sayHi", message.value);
+};
+
+let message: Ref<string> = ref("");
 </script>
 
 <style scoped>
