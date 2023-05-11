@@ -39,20 +39,20 @@
             <tr v-if="selectedProducts.length > 0">
               <td></td>
               <td></td>
-              <td>SUBTOTAL:</td>
-              <td>L. {{ subtotal }}</td>
+              <td v-custom-font.xxl.red>SUBTOTAL:</td>
+              <td v-custom-size2:large>L. {{ subtotal }}</td>
             </tr>
             <tr v-if="selectedProducts.length > 0">
               <td></td>
               <td></td>
               <td>ISV:</td>
-              <td>L. {{ ISV }}</td>
+              <td v-font-size>L. {{ ISV }}</td>
             </tr>
             <tr v-if="selectedProducts.length > 0">
               <td></td>
               <td></td>
               <td>TOTAL:</td>
-              <td>L. {{ total }}</td>
+              <td v-custom-size="30">L. {{ total }}</td>
             </tr>
           </tbody>
         </table>
