@@ -1,18 +1,16 @@
 <template>
-  <PostList />
+  <router-view />
 </template>
 
-<script lang="ts" setup>
-import PostList from "./components/PostList.vue";
-</script>
+<script lang="ts" setup></script>
 
-<style>
+<style lang="scss">
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
+  color: $primaryColor;
   margin-top: 60px;
 }
 </style>
