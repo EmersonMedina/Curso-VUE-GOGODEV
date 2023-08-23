@@ -4,6 +4,10 @@ import router from "./router";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap";
 import { initializeApp } from "firebase/app";
+import { Amplify } from 'aws-amplify'; 
+import awsExports from './aws-exports'
+
+Amplify.configure(awsExports); 
 
 const firebaseConfig = {
   apiKey: "AIzaSyDNUVSBDg_QDWMsm4tfBbfNMggtFBSbg_c",

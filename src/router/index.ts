@@ -2,6 +2,7 @@ import { createRouter, createWebHistory, RouteRecordRaw } from "vue-router";
 import HomeView from "../views/HomeView.vue";
 import AuthView from "../views/AuthView.vue";
 import FirebaseAuthView from "../views/FirebaseAuthView.vue";
+import AwsAuthView from "../views/AwsAuthView.vue";
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -18,6 +19,11 @@ const routes: Array<RouteRecordRaw> = [
     path: "/auth-firebase",
     name: "firebase-auth",
     component: FirebaseAuthView,
+  },
+   {
+    path: "/auth-aws",
+    name: "aws-auth",
+    component: AwsAuthView,
   },
 ];
 

@@ -2,7 +2,8 @@
   <nav>
     <router-link to="/">Home</router-link> |
     <router-link to="/auth">Normal Auth</router-link> |
-    <router-link to="/auth-firebase">Firebase Auth</router-link>
+    <router-link to="/auth-firebase">Firebase Auth</router-link> |
+    <router-link to="/auth-aws">AWS Auth</router-link>
   </nav>
   <router-view />
 </template>
