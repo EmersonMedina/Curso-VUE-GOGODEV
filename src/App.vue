@@ -1,18 +1,18 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js + TypeScript App"/>
+  <button @click="show = !show">Mostrar / Ocultar</button>
+  <Transition>
+    <h1 v-if="show">Main app animated</h1>
+  </Transition>
+
+  <ListComponent/>
 </template>
 
-<script lang="ts">
-import { defineComponent } from 'vue';
-import HelloWorld from './components/HelloWorld.vue';
+<script lang="ts" setup>
+  import { ref } from 'vue'
+  import ListComponent from '@/components/ListComponent.vue'
 
-export default defineComponent({
-  name: 'App',
-  components: {
-    HelloWorld
-  }
-});
+  const show = ref(false)
+
 </script>
 
 <style>
@@ -24,4 +24,13 @@ export default defineComponent({
   color: #2c3e50;
   margin-top: 60px;
 }
+
+.v-enter-active, .v-leave.active{
+  transition: opacity 0.5s ease;
+}
+
+.v-enter-from, .v-leave-to {
+  opacity: 0;
+}
+
 </style>
