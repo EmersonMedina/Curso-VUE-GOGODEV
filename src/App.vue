@@ -9,7 +9,7 @@
 
   watch(note, (value, oldValue) => {
     alert('Ejecutando watch ' + value)
-   })
+  })
 </script>
 
 <style>
