@@ -1,15 +1,19 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   devtools: { enabled: true },
-  ssr: true, 
+  // ssr: true, 
   nitro: {
-    prerender: { 
-      routes:['/proyects', '/services', '/about', '/contact', '/' ] 
-    }
+    // prerender: { 
+    //   routes:['/proyects', '/services', '/about', '/contact', '/' ] 
+    // }, 
+    plugins: ["~/server/index.ts"]
   }, 
-  routeRules: {
-    '/': { prerender: true}, 
-    '/about': { ssr: true }, 
-    '/services': { ssr: false } 
-  }
+  runtimeConfig: { 
+    mongoDbUri: process.env.MONGO_URI
+   } 
+  // routeRules: {
+  //   '/': { prerender: true}, 
+  //   '/about': { ssr: true }, 
+  //   '/services': { ssr: false } 
+  // }
 })
